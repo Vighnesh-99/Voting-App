@@ -1,5 +1,7 @@
 # Example Voting App
 
+Project has been referred thorugh : https://github.com/dockersamples/example-voting-app.git
+
 A simple distributed application running across multiple Docker containers.
 
 ## Getting started
@@ -27,7 +29,20 @@ Once you have your swarm, in this directory run:
 ```shell
 docker stack deploy --compose-file docker-stack.yml vote
 ```
+#Run the app in Kubernetes
+The folder k8s-specificatins conatins the YAML specifications of the Voting App's services.
 
+Run the following command to create the deployments and services. Note it will create these resources in your current namespace (`default` if you haven't changed it.)
+
+```shell
+kubectl create -f k8s-specifications/
+```
+The `vote` web app is then available on port 31000 on each host of the cluster, the `result` web app is available on port 31001.
+
+To remove them, run:
+```shell
+kubectl delete -f k8s-specifications/
+```
 ## Architecture
 
 ![Architecture diagram](architecture.excalidraw.png)
