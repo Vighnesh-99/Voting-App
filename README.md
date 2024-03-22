@@ -29,7 +29,7 @@ Once you have your swarm, in this directory run:
 ```shell
 docker stack deploy --compose-file docker-stack.yml vote
 ```
-#Run the app in Kubernetes
+# Run the app in Kubernetes
 The folder k8s-specificatins conatins the YAML specifications of the Voting App's services.
 
 Run the following command to create the deployments and services. Note it will create these resources in your current namespace (`default` if you haven't changed it.)
