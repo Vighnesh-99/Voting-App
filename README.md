@@ -1,8 +1,8 @@
 # Example Voting App
 
-Project has been referred thorugh : https://github.com/dockersamples/example-voting-app.git
-
 A simple distributed application running across multiple Docker containers.
+
+Project has been referred thorugh : https://github.com/dockersamples/example-voting-app.git
 
 ## Getting started
 
